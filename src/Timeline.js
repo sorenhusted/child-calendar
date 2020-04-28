@@ -19,6 +19,7 @@ const Timeline = () => {
             {
                 items.map(item => (
                     <VerticalTimelineElement
+                        key={item.name}
                         className="vertical-timeline-element--work"
                         contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                         contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
@@ -26,7 +27,7 @@ const Timeline = () => {
                         iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                         icon={<IconSyringe />}
                     >
-                        <TimelineItem key={item.name} item={item} />
+                        <TimelineItem item={item} />
                     </VerticalTimelineElement>
                 ))
             }
